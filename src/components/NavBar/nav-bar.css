@@ -1,0 +1,37 @@
+.navbar {
+    margin-left: 240px;
+}
+
+.navbar-name-page {
+    font-size: 14px;
+    font-weight: var(--font-weight);
+}
+
+.btn-tai-len {
+    width: 96px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.bi-upload {
+    font-size: 14px;
+    position: relative;
+    top: -1px;
+
+}
+
+.rounded-circle {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+
+.user-name {
+    font-weight: var(--font-weight);
+}
+
+.bi-chevron-down {
+    font-size: 12px;
+}
