@@ -14,7 +14,7 @@ import Document from './pages/Category/Document/Document'
 import Image from './pages/Category/Image/Image'
 import Video from './pages/Category/Video/Video'
 import Audio from './pages/Category/Audio/Audio'
-import Compressed from './pages/Category/Compressed/Compressed'
+import Archive from './pages/Category/Archive/Archive'
 import Folder from './pages/Category/Folder/Folder'
 import Shared from './pages/Category/Shared/Shared'
 import RecycleBin from './pages/Category/RecycleBin/RecycleBin'
@@ -41,7 +41,7 @@ function App() {
             <Route path="/Image" element={<Image />} />
             <Route path="/Video" element={<Video />} />
             <Route path="/Audio" element={<Audio />} />
-            <Route path="/Compressed" element={<Compressed />} />
+            <Route path="/Archive" element={<Archive />} />
             <Route path="/Folder" element={<Folder />} />
             <Route path="/Shared" element={<Shared />} />
             <Route path="/RecycleBin" element={<RecycleBin />} />

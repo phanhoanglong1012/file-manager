@@ -22,7 +22,7 @@ const SideBar = ({ setCurrentPage }) => {
         { name: "Hình", path: "/Image", icon: "bi-image" },
         { name: "Video", path: "/Video", icon: "bi-film" },
         { name: "Âm thanh", path: "/Audio", icon: "bi-music-note" },
-        { name: "Tệp nén", path: "/Compressed", icon: "bi-file-earmark-zip" },
+        { name: "Tệp nén", path: "/Archive", icon: "bi-file-earmark-zip" },
         { name: "Thư mục", path: "/Folder", icon: "bi-folder" },
         { name: "Chia sẻ", path: "/Shared", icon: "bi-share" },
         { name: "Thùng rác", path: "/RecycleBin", icon: "bi-trash" },
