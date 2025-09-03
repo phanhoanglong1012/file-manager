@@ -1,4 +1,4 @@
-import "./nav-bar.css"
+import "./Navbar.css"
 
 const NavBar = ({ currentPage }) => {
     return (

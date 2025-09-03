@@ -1,0 +1,64 @@
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+}
+
+.sb-title {
+    color: var(--text-grey);
+    font-weight: var(--font-weight);
+}
+
+.txt-tai-len {
+    font-weight: var(--font-weight);
+}
+
+.nav-link i {
+    font-size: 14px;
+    color: var(--text-grey);
+}
+
+.nav-link.active {
+    background-color: var(--background-blue-10);
+}
+
+.nav-link.active .sb-title {
+    color: var(--text-blue);
+}
+
+.nav-link.active i {
+    color: var(--text-blue);
+}
+
+.sidebar-scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.sidebar-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar-scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+.sidebar:hover .sidebar-scroll::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Firefox */
+.sidebar-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+.sidebar:hover .sidebar-scroll {
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}

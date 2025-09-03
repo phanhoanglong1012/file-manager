@@ -1,15 +1,15 @@
-import "./side-bar.css";
+import "./Sidebar.css";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
 const SideBar = ({ setCurrentPage }) => {
-    const [showWorkspaces, setShowWorkspaces] = useState(false);
-    const [showCategories, setShowCategories] = useState(false);
+    const [showWorkspaces, setShowWorkspaces] = useState(true);
+    const [showCategories, setShowCategories] = useState(true);
 
     const mainItems = [
-        { name: "Trang chủ", path: "/TrangChu", iconDefault: "bi-house", iconActive: "bi-house-fill" },
-        { name: "Tài liệu của tôi", path: "/TaiLieuCuaToi", iconDefault: "bi-folder", iconActive: "bi-folder-fill" },
-        { name: "Thông báo", path: "/ThongBao", iconDefault: "bi-bell", iconActive: "bi-bell-fill" },
+        { name: "Trang chủ", path: "/Home", iconDefault: "bi-house", iconActive: "bi-house-fill" },
+        { name: "Tài liệu của tôi", path: "/MyDocument", iconDefault: "bi-folder", iconActive: "bi-folder-fill" },
+        { name: "Thông báo", path: "/Notification", iconDefault: "bi-bell", iconActive: "bi-bell-fill" },
     ];
 
     const workspaces = [
@@ -18,23 +18,25 @@ const SideBar = ({ setCurrentPage }) => {
     ];
 
     const categories = [
-        { name: "Hình", path: "/Hinh", icon: "bi-image" },
-        { name: "Videos", path: "/Videos", icon: "bi-film" },
-        { name: "Tệp", path: "/Tep", icon: "bi-file-earmark" },
-        { name: "Âm thanh", path: "/AmThanh", icon: "bi-music-note" },
-        { name: "Chia sẻ", path: "/ChiaSe", icon: "bi-share" },
-        { name: "Thùng rác", path: "/ThungRac", icon: "bi-trash" },
+        { name: "Tài liệu", path: "/Document", icon: "bi-file-earmark-text" },
+        { name: "Hình", path: "/Image", icon: "bi-image" },
+        { name: "Video", path: "/Video", icon: "bi-film" },
+        { name: "Âm thanh", path: "/Audio", icon: "bi-music-note" },
+        { name: "Tệp nén", path: "/Compressed", icon: "bi-file-earmark-zip" },
+        { name: "Thư mục", path: "/Folder", icon: "bi-folder" },
+        { name: "Chia sẻ", path: "/Shared", icon: "bi-share" },
+        { name: "Thùng rác", path: "/RecycleBin", icon: "bi-trash" },
     ];
 
     const bottomItems = [
-        { name: "Cài đặt", path: "/CaiDat", icon: "bi-gear" },
-        { name: "Trợ giúp", path: "/TroGiup", icon: "bi-question-circle" },
+        { name: "Cài đặt", path: "/Setting", icon: "bi-gear" },
+        { name: "Trợ giúp", path: "/Support", icon: "bi-question-circle" },
     ];
 
     return (
         <div className="sidebar bg-light border-end p-3 d-flex flex-column h-100">
-            {/* Nội dung trên */}
             <ul className="nav flex-column">
+                {/* Main Items */}
                 {mainItems.map((item, idx) => (
                     <li className="nav-item" key={idx}>
                         <NavLink
@@ -70,7 +72,7 @@ const SideBar = ({ setCurrentPage }) => {
                         <i
                             className={`bi ${showWorkspaces ? "bi-chevron-up" : "bi-chevron-down"}`}
                             onClick={(e) => {
-                                e.preventDefault(); // chặn đổi route khi bấm icon
+                                e.preventDefault();
                                 e.stopPropagation();
                                 setShowWorkspaces(!showWorkspaces);
                             }}
@@ -125,7 +127,7 @@ const SideBar = ({ setCurrentPage }) => {
                 )}
             </ul>
 
-            {/* Nội dung dưới cùng */}
+            {/* Bottom Items */}
             <div className="mt-auto">
                 <ul className="nav flex-column">
                     {bottomItems.map((item, idx) => (
