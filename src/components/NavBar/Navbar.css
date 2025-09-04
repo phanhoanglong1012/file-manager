@@ -32,6 +32,6 @@
     font-weight: var(--font-weight);
 }
 
-.bi-chevron-down {
-    font-size: 12px;
+.cursor-pointer {
+    cursor: pointer !important;
 }
